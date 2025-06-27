@@ -8,6 +8,7 @@ public class Book {
         this.id = id;
         this.title = title;
         this.author = author;
+        this.state = State.AVAILABLE;
     }
 
     public long getId() {
