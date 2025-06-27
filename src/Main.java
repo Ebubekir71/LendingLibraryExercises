@@ -2,6 +2,24 @@
 
 public class Main {
     public static void main(String[] args) {
+        Author author = new Author("Soyisim", "Isim");
+        Book book = new Book(1234567890, "Kelebek Vadisi", author);
+
+        Actor actor = new Actor("Samanth", "Kevin");
+        Actor actor2 = new Actor("Löwen", "Simith");
+
+        Movie movie = new Movie(1234567890, "Vadiye Dönüs");
+
+        Customer customer = new Customer("Ali", "Yilmaz", "ali@gmail.com");
+
+
+        movie.addActor(actor);
+        movie.addActor(actor2);
+
+        for (Actor a : movie.getActors()) {
+            System.out.println(a.getFirstName() + " " + a.getLastName());
+        }
+
 
     }
 }
