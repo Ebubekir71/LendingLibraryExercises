@@ -11,7 +11,8 @@ public class Main {
         Movie movie = new Movie(1234567890, "Vadiye Dönüs");
 
         Customer customer = new Customer("Ali", "Yilmaz", "ali@gmail.com");
-
+        System.out.println(customer.getFirstName() + " " + customer.getLastName());
+        System.out.println(customer.getEmail());
 
         movie.addActor(actor);
         movie.addActor(actor2);
