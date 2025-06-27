@@ -31,6 +31,7 @@ public class LendingManager {
         return true;
     }
 
+
     public int getNumberOfBookLendings() {
         return bookLendings.size();
     }
