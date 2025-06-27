@@ -1,33 +1,14 @@
-public class Book {
+public class Book extends LendingItem{
     private Author author;
-    private long id;
-    private String title;
-    private State state;
 
     public Book(long id, String title, Author author) {
-        this.id = id;
-        this.title = title;
+        super(id, title);
         this.author = author;
-        this.state = State.AVAILABLE;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
     }
 
     public Author getAuthor() {
         return author;
     }
 
-    public State getState() {
-        return state;
-    }
 
-    public void setState(State state) {
-        this.state = state;
-    }
 }

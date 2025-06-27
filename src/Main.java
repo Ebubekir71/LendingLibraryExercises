@@ -11,6 +11,13 @@ public class Main {
         Movie movie = new Movie(1234567890, "Vadiye Dönüs");
 
         Customer customer = new Customer("Ali", "Yilmaz", "ali@gmail.com");
+        Actor actor3 = new Actor("Ebubekir", "Tosun");
+        Person person = new Person("Süleyman", "Sah");
+
+        System.out.println(customer.getFirstName()+ customer.getLastName() + customer.getEmail() +"/////////////////////////////////");
+        System.out.println(actor3.getFirstName()+ actor3.getLastName()+ "/////////////");
+        System.out.println(person.getFirstName()+ person.getLastName()+"//////");
+
 
         LendingManager lendingManager = new LendingManager();
         boolean ok = lendingManager.lendMovie(customer, movie);

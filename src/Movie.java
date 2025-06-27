@@ -1,24 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Movie {
+public class Movie extends LendingItem{
     private List<Actor> actors =  new ArrayList<Actor>();
-    private long id;
-    private String title;
-    private State state;
 
     public Movie(long id, String title) {
-        this.id = id;
-        this.title = title;
-        this.state = State.AVAILABLE;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
+        super(id, title);
     }
 
     public void addActor(Actor actor) {
@@ -26,12 +13,5 @@ public class Movie {
     }
     public List<Actor> getActors() {
         return actors;
-    }
-
-    public State getState() {
-        return state;
-    }
-    public void setState(State state) {
-        this.state = state;
     }
 }
