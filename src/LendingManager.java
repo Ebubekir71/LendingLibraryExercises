@@ -30,6 +30,24 @@ public class LendingManager {
         }
         return true;
     }
+    public boolean returnBook(Book book){
+        for(BookLending lend : bookLendings){
+            if(lend.getBook() == book && lend.getReturnDate() == null){
+                lend.setReturnDate(LocalDate.now());
+                book.setState(State.AVAILABLE);
+                return true;
+            }
+        }return false;
+    }
+    public boolean returnMovie(Movie movie){
+        for (MovieLending lend : movieLendings){
+            if (lend.getMovie() == movie && lend.getReturnDate() == null){
+                lend.setReturnDate(LocalDate.now());
+                movie.setState(State.AVAILABLE);
+                return true;
+            }
+        }return false;
+    }
 
 
     public int getNumberOfBookLendings() {
